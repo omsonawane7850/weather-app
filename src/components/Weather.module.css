@@ -122,7 +122,7 @@
   display: block;
   margin-top: 2px;
   color: #dbeafe;
-  font-size: 14px;
+  font-size: 15px;
   white-space: nowrap;
 }
 
@@ -168,7 +168,7 @@
     gap: 18px;
   }
   .humidity {
-    padding-left: 28px;
+    padding-left: 26px;
   }
   .wind {
     padding-left: 20px;
@@ -192,7 +192,7 @@
 
   .humidity span,
   .wind span {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -261,7 +261,7 @@
 
   .humidity span,
   .wind span {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
@@ -324,6 +324,6 @@
 
   .humidity span,
   .wind span {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
