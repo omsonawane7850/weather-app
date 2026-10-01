@@ -18,10 +18,99 @@ body {
 }
 
 .app-container {
+  position: relative;
   width: 100%;
   min-height: 100dvh;
   display: grid;
   place-items: center;
-  background: #000;
+  overflow: hidden;
   font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #87ceeb,
+    #b9e7ff,
+    #e8f8ff
+  );
+}
+
+/* Cloud 1 */
+
+.app-container::before {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 55px;
+
+  top: 12%;
+  left: 8%;
+
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+
+  box-shadow:
+    35px -25px 0 -5px rgba(255, 255, 255, 0.8),
+    75px -10px 0 -2px rgba(255, 255, 255, 0.8),
+    110px 5px 0 -8px rgba(255, 255, 255, 0.8);
+
+  animation: cloudMove 18s linear infinite;
+}
+
+/* Cloud 2 */
+
+.app-container::after {
+  content: "";
+  position: absolute;
+
+  width: 160px;
+  height: 50px;
+
+  right: 5%;
+  bottom: 15%;
+
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 50px;
+
+  box-shadow:
+    30px -22px 0 -4px rgba(255, 255, 255, 0.65),
+    65px -8px 0 -2px rgba(255, 255, 255, 0.65),
+    100px 4px 0 -7px rgba(255, 255, 255, 0.65);
+
+  animation: cloudMoveReverse 22s linear infinite;
+}
+
+/* Keep weather card above clouds */
+
+.app-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes cloudMove {
+  0% {
+    transform: translateX(-30px);
+  }
+
+  50% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes cloudMoveReverse {
+  0% {
+    transform: translateX(30px);
+  }
+
+  50% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(30px);
+  }
 }
