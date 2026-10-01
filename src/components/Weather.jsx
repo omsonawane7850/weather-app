@@ -97,14 +97,14 @@ const Weather = () => {
           <p className={styles.location}>{weatherData.location}</p>
           <div className={styles.weatherData}>
             <div className={styles.col}>
-              <img src={humidity_icon} alt="" />
-              <div>
+              <div className={styles.humidity}>
+                <img src={humidity_icon} alt="" />
                 <p>{weatherData.humidity}%</p>
                 <span>Humidity</span>
               </div>
 
-              <img src={wind_icon} alt="" />
-              <div>
+              <div className={styles.wind}>
+                <img src={wind_icon} alt="" />
                 <p>{weatherData.windSpeed}km/h</p>
                 <span>Wind Speed</span>
               </div>
