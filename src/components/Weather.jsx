@@ -40,7 +40,7 @@ const Weather = () => {
     "10n": moon_rain_icon,
     "11n": moon_rain_icon,
     "13n": snow_icon,
-    "50n": drizzle_icon,
+    "50n": moon_rain_icon,
   };
 
   const inputRef = useRef();
